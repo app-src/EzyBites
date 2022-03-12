@@ -119,9 +119,9 @@ public class AddPostActivity extends AppCompatActivity {
 
                         Toast.makeText(AddPostActivity.this, "Uri :"+uri.toString(), Toast.LENGTH_SHORT).show();
                         Log.d("Uri:" , uri.toString());
-                        PostModel model = new PostModel(uri.toString());
+                       // PostModel model = new PostModel(uri.toString(), user.getUid().toString());
                         String modelId = root.push().getKey();
-                        root.child(modelId).setValue(model);
+                       // root.child(modelId).setValue(model);
 
 
                         HashMap<String, Object> map = new HashMap<>();

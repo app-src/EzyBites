@@ -2,23 +2,22 @@ package io.github.ashishthehulk.ezybites.Models;
 
 public class PostModel {
 
-    private String imageUrl;
+    private int image;
 
     public PostModel()
     {
 
     }
+    public PostModel(int image) {
+        this.image = image;
 
-    public PostModel(String imageUrl)
-    {
-        this.imageUrl = imageUrl;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getImage() {
+        return image;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImage(int image) {
+        this.image = image;
     }
 }
