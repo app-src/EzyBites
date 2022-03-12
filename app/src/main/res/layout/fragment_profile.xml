@@ -12,7 +12,7 @@
         android:layout_height="98dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="58dp"
-        android:src="@color/fadeBlack"
+        android:src="@drawable/food"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -84,7 +84,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="328dp"
-        android:text="Name"
+        android:text="@string/name"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/desp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="Description"
+        android:text="@string/description"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Posts"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,13 +108,17 @@
         android:id="@+id/Posts"
         android:layout_width="407dp"
         android:layout_height="521dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
         android:columnWidth="90dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
         android:numColumns="3"
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

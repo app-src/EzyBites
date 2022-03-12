@@ -8,4 +8,6 @@
     <string name="followers">Followers</string>
     <string name="order_dish">This is the dish that you are going to order.</string>
     <string name="veg_or_nonveg">Veg or Non Veg.</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
 </resources>
