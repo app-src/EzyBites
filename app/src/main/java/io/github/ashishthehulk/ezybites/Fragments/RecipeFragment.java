@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +36,7 @@ public class RecipeFragment extends Fragment {
 
     private SearchView searchView;
     private FloatingActionButton spin_fab;
+    private RecyclerView recipeList;
 
     public RecipeFragment() {
         // Required empty public constructor
@@ -71,10 +73,23 @@ public class RecipeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_community, container, false);
+        View view =  inflater.inflate(R.layout.fragment_recipe, container, false);
+
+        String[] temp={"A","B","C","D","E"};
+        int[] temp2={R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food};
+        int[] temp3={R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food};
+
+        recipeList= (RecyclerView) view.findViewById(R.id.recyclerView);
+        recipeList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recipeList.setHasFixedSize(true);
+        recipeList.setAdapter(new RecipeAdapter(temp,temp2,temp3));
+
+
+
+
 
         searchView = view.findViewById(R.id.search_recipe);
-        spin_fab = view.findViewById(R.id.AddReciepe);
+        spin_fab = view.findViewById(R.id.AddRecipe);
         spin_fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
