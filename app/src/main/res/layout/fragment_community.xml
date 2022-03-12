@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/search_post"
+        android:id="@+id/search_recipe"
         android:iconifiedByDefault="false"
         android:layout_margin="8dp"
         app:tint="@color/white"
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_post" >
+        app:layout_constraintTop_toBottomOf="@+id/search_recipe" >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/postRecyclerView"

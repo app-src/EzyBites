@@ -76,7 +76,7 @@ public class CommunityFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_community, container, false);
 
-        searchView = view.findViewById(R.id.search_post);
+        searchView = view.findViewById(R.id.search_recipe);
         refreshView = view.findViewById(R.id.refreshView);
         postRecyclerView = view.findViewById(R.id.postRecyclerView);
         spin_fab = view.findViewById(R.id.spin_fab);

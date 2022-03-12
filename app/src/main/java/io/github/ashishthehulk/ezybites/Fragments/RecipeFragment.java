@@ -1,14 +1,20 @@
 package io.github.ashishthehulk.ezybites.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import io.github.ashishthehulk.ezybites.R;
+import io.github.ashishthehulk.ezybites.Screens.AddPostScreen;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +31,9 @@ public class RecipeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private SearchView searchView;
+    private FloatingActionButton spin_fab;
 
     public RecipeFragment() {
         // Required empty public constructor
@@ -61,6 +70,18 @@ public class RecipeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recipe, container, false);
+        View view =  inflater.inflate(R.layout.fragment_community, container, false);
+
+        searchView = view.findViewById(R.id.search_recipe);
+        spin_fab = view.findViewById(R.id.AddReciepe);
+        spin_fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getContext(), AddPostScreen.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 }
