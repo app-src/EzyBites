@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="center"
-                android:src="@drawable/error" />
+                android:src="@drawable/food" />
 
 
 
@@ -41,9 +41,8 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:text="SONG NAME"
+                android:text="RECIPE NAME"
                 android:textColor="@color/shadow"
-                android:fontFamily="@font/airbnb_cereal_medium"
                 android:textSize="18sp" />
 
 
