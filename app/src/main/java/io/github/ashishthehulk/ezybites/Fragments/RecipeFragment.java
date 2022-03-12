@@ -16,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import io.github.ashishthehulk.ezybites.R;
 import io.github.ashishthehulk.ezybites.Screens.AddPostScreen;
 
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RecipeFragment#newInstance} factory method to

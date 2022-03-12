@@ -18,7 +18,7 @@
             android:name=".Screens.AddPostActivity"
             android:exported="false" />
         <activity
-            android:name=".Screens.AddPostScreen"
+            android:name=".Screens.AddPostActivity"
             android:exported="false" />
         <activity
             android:name=".Screens.OtpActivity"

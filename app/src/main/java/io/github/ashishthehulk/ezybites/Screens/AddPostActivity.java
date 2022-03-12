@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -128,8 +129,8 @@ public class AddPostActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
 
-                Toast.makeText(AddPostActivity.this, "Uploading failed!", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(AddPostActivity.this, "Uploading failed!" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("Error",e.getMessage());
             }
         });
 

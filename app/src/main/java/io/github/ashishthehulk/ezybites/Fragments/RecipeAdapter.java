@@ -44,7 +44,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
     @Override
     public int getItemCount() {
-        return temp.length;
+        return data.length;
     }
 
     public class RecipeViewHolder extends RecyclerView.ViewHolder{
