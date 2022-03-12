@@ -12,10 +12,10 @@
         android:id="@+id/circleImageView"
         android:layout_width="115dp"
         android:layout_height="98dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/chef"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingClass" />
@@ -25,96 +25,105 @@
         style="@style/TextAppearance.Material3.BodyLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="73dp"
+        android:layout_marginTop="8dp"
         android:text="@string/post"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView76"
-        app:layout_constraintStart_toEndOf="@+id/circleImageView"
+        app:layout_constraintEnd_toEndOf="@+id/noOfPost"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="@+id/noOfPost"
         app:layout_constraintTop_toBottomOf="@+id/noOfPost" />
 
     <TextView
+        android:textColor="@color/white"
         android:id="@+id/noOfPost"
         style="@style/TextAppearance.Material3.BodyLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="114dp"
-        android:layout_marginBottom="2dp"
         android:text="@string/_0"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
         app:layout_constraintEnd_toStartOf="@+id/noOfFollowers"
+        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toEndOf="@+id/circleImageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/circleImageView" />
 
     <TextView
+        android:textColor="@color/white"
         android:id="@+id/noOfFollowers"
         style="@style/TextAppearance.Material3.BodyLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="2dp"
         android:text="@string/_0"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView76"
+        app:layout_constraintBottom_toBottomOf="@+id/noOfPost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/noOfPost"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/noOfPost" />
 
     <TextView
         android:id="@+id/textView76"
         style="@style/TextAppearance.Material3.BodyLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="29dp"
         android:text="@string/followers"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/noOfFollowers" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/noOfFollowers"
+        app:layout_constraintStart_toStartOf="@+id/noOfFollowers"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/name"
         style="@style/TextAppearance.Material3.BodyLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="328dp"
         android:text="@string/name"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintEnd_toEndOf="@+id/circleImageView"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
     <TextView
         android:id="@+id/desp"
         style="@style/TextAppearance.Material3.BodyLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="@string/description"
+        android:layout_width="120dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/email"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <GridView
         android:id="@+id/Posts"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:background="@color/white"
-
-
         android:horizontalSpacing="10dp"
         android:numColumns="3"
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="EDIT PROFILE"
+        android:textColor="@color/themeColor"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/desp" />
