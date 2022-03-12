@@ -3,10 +3,16 @@ package io.github.ashishthehulk.ezybites.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import io.github.ashishthehulk.ezybites.R;
 
@@ -25,6 +31,11 @@ public class CommunityFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private SearchView searchView;
+    private SwipeRefreshLayout refreshView;
+    private RecyclerView  postRecyclerView;
+    private FloatingActionButton spin_fab;
 
     public CommunityFragment() {
         // Required empty public constructor
@@ -61,6 +72,20 @@ public class CommunityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_community, container, false);
+        View view =  inflater.inflate(R.layout.fragment_community, container, false);
+
+        searchView = view.findViewById(R.id.search_post);
+        refreshView = view.findViewById(R.id.refreshView);
+        postRecyclerView = view.findViewById(R.id.postRecyclerView);
+        spin_fab = view.findViewById(R.id.spin_fab);
+
+
+
+        postRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        postRecyclerView.setHasFixedSize(true);
+
+
+
+        return view;
     }
 }
