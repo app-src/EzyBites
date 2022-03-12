@@ -1,5 +1,6 @@
 package io.github.ashishthehulk.ezybites.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,10 +8,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import io.github.ashishthehulk.ezybites.EditProfileActivity;
 import io.github.ashishthehulk.ezybites.ImageAdapter;
 import io.github.ashishthehulk.ezybites.R;
+import io.github.ashishthehulk.ezybites.Screens.AddPostActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +31,7 @@ public class ProfileFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private Button editProfile;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -67,6 +74,15 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
         gridView = view.findViewById(R.id.Posts);gridView.setAdapter(new ImageAdapter(getContext()));
+        editProfile = view.findViewById(R.id.button);
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), EditProfileActivity.class));
+                getActivity().finish();
+            }
+
+        });
         return view;
     }
 }

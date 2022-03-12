@@ -21,6 +21,9 @@
             android:name=".Screens.AddPostScreen"
             android:exported="false" />
         <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".Screens.OtpActivity"
             android:exported="false" />
         <activity
