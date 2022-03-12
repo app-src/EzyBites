@@ -7,4 +7,36 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="darkRed">#b70042</color>
+    <color name="lightRed">#ff3053</color>
+    <color name="themeYellow">#ffeb3c</color>
+    <color name="themeGreen">#ffeb3c</color>
+    <color name="themeBlue">#3E3A3A</color>
+    <color name="fadeBlack">#3E3A3A</color>
+    <color name="referRed">#fe4f60</color>
+    <color name="shadow">#2E2E2E</color>
+
+    <color name="themeColor">#b41f59</color>
+
+
+
+    <color name="selectedIconColor">#04E1F8</color>
+    <color name="defaultIconColor">#F6F6F6</color>
+    <color name="countTextColor">#fff</color>
+    <color name="countBackgroundColor">#F45E0B</color>
+    <color name="circleColor">#fff</color>
+    <color name="backgroundBottomColor">#04E1F8</color>
+
+
+    <color name="textGreen">#07FA10</color>
+    <color name="textRed">#F80404</color>
+    <color name="ncshindinewcolor">#001729</color>
+
+    <color name="dialog_color_1">#FDD736</color>
+    <color name="dialog_color_2">#3B5796</color>
+
+
 </resources>

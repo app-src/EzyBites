@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/recipe"
+        android:title="Recipe"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_recipe"/>
+
+    <item
+        android:id="@+id/community"
+        android:title="Community"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_baseline_connect_without_contact_24"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
+
+
+
+</menu>
