@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/themeColor"
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment">
 
@@ -11,9 +12,9 @@
         android:id="@+id/circleImageView"
         android:layout_width="115dp"
         android:layout_height="98dp"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="8dp"
-        android:src="@drawable/food"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/chef"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -106,6 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:background="@color/white"
 
 
         android:horizontalSpacing="10dp"
