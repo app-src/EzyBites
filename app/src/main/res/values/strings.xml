@@ -6,4 +6,6 @@
     <string name="_0">0</string>
     <string name="_40">0</string>
     <string name="followers">Followers</string>
+    <string name="order_dish">This is the dish that you are going to order.</string>
+    <string name="veg_or_nonveg">Veg or Non Veg.</string>
 </resources>
