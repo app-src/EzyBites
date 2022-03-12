@@ -26,6 +26,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import io.github.ashishthehulk.ezybites.MainActivity;
+import io.github.ashishthehulk.ezybites.Models.PostModel;
 import io.github.ashishthehulk.ezybites.R;
 
 public class AddPostActivity extends AppCompatActivity {
@@ -103,6 +104,19 @@ public class AddPostActivity extends AppCompatActivity {
         fileRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+
+
+                        PostModel model = new PostModel(uri.toString());
+                        String modelId = root.push().getKey();
+                        root.child(modelId).setValue(model);
+                        Toast.makeText(AddPostActivity.this, "Uploaded Successfully.", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
 
             }
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
