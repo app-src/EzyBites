@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786090821077",
+    "project_id": "ezybites-3b21c",
+    "storage_bucket": "ezybites-3b21c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786090821077:android:4f041a5b123bfc3b6be95c",
+        "android_client_info": {
+          "package_name": "io.github.ashishthehulk.ezybites"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786090821077-egipjqddt0sn4q8od2qb94qdffbbuch6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBW-709gWTH43WGCwEa4fDA4w2UZDBAyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786090821077-egipjqddt0sn4q8od2qb94qdffbbuch6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
