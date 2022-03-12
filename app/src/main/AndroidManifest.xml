@@ -2,21 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.ashishthehulk.ezybites">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EzyBites"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
-        >
+        android:theme="@style/Theme.EzyBites">
         <activity
-            android:name=".MainActivity"
+            android:name=".Screens.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

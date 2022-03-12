@@ -17,7 +17,7 @@ import io.github.ashishthehulk.ezybites.Fragments.RecipeFragment;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigation;
-    private int frag = 1;
+    private int frag=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
