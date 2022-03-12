@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment">
 
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView"
         android:layout_width="115dp"
         android:layout_height="98dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="58dp"
+        android:layout_marginStart="8dp"
         android:src="@drawable/food"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass" />
 
     <TextView
         android:id="@+id/textView2"
@@ -86,8 +87,6 @@
         android:layout_marginEnd="328dp"
         android:text="@string/name"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/desp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
@@ -99,19 +98,16 @@
         android:layout_marginBottom="30dp"
         android:text="@string/description"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/Posts"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <GridView
         android:id="@+id/Posts"
-        android:layout_width="407dp"
-        android:layout_height="521dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="30dp"
-        android:columnWidth="90dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+
+
         android:horizontalSpacing="10dp"
         android:numColumns="3"
         android:stretchMode="columnWidth"
