@@ -66,7 +66,7 @@
                     android:id="@+id/verifyNumber"
                     android:layout_margin="3dp"
                     android:textColor="@color/themeColor"
-                    android:maxLength="12"
+                    android:maxLength="10"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:padding="10dp"

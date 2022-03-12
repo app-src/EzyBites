@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         bottomNavigation = findViewById(R.id.bottomNavigation);
+        try {
+            Bundle extras = getIntent().getExtras();
+            if (extras != null) {
+                frag = extras.getInt("frag");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         switch (frag)

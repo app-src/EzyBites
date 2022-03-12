@@ -21,10 +21,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.HashMap;
+import java.util.Locale;
 
 import io.github.ashishthehulk.ezybites.MainActivity;
 import io.github.ashishthehulk.ezybites.Models.PostModel;
@@ -39,6 +43,8 @@ public class AddPostActivity extends AppCompatActivity {
     private Uri imageUri;
     private FirebaseUser user;
     private FirebaseAuth auth;
+    private FirebaseDatabase database;
+    private FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +58,8 @@ public class AddPostActivity extends AppCompatActivity {
         reference = FirebaseStorage.getInstance().getReference();
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+        database = FirebaseDatabase.getInstance();
+        firestore = FirebaseFirestore.getInstance();
 
 
         backPost.setOnClickListener(new View.OnClickListener() {
@@ -109,11 +117,32 @@ public class AddPostActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
 
-
+                        Toast.makeText(AddPostActivity.this, "Uri :"+uri.toString(), Toast.LENGTH_SHORT).show();
+                        Log.d("Uri:" , uri.toString());
                         PostModel model = new PostModel(uri.toString());
                         String modelId = root.push().getKey();
                         root.child(modelId).setValue(model);
-                        Toast.makeText(AddPostActivity.this, "Uploaded Successfully.", Toast.LENGTH_SHORT).show();
+
+
+                        HashMap<String, Object> map = new HashMap<>();
+                        map.put("image",uri.toString());
+                        map.put("uid",user.getUid());
+
+
+                        firestore.collection("Posts").document(user.getUid().toString()+System.currentTimeMillis()).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+
+                                Toast.makeText(AddPostActivity.this, "Image Added", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(getApplicationContext(), "Error : "+ e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
 
                     }
                 });

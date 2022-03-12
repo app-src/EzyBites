@@ -472,6 +472,7 @@ public class OtpActivity extends AppCompatActivity {
         HashMap<String, Object> map = new HashMap<>();
         map.put("name","user"+nameTemp);
         map.put("number",number);
+        map.put("email","");
         map.put("uid",user.getUid());
 
 

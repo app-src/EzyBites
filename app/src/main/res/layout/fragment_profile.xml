@@ -15,7 +15,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="40dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/chef"
+        android:src="@drawable/chefhat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingClass" />
@@ -25,14 +25,15 @@
         style="@style/TextAppearance.Material3.BodyLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/post"
+        android:layout_marginStart="4dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/noOfPost"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/noOfPost"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="@+id/noOfPost"
-        app:layout_constraintTop_toBottomOf="@+id/noOfPost" />
+        app:layout_constraintTop_toTopOf="@id/noOfPost" />
 
     <TextView
         android:textColor="@color/white"
@@ -41,38 +42,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_0"
-        android:textSize="40sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
-        app:layout_constraintEnd_toStartOf="@+id/noOfFollowers"
-        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintEnd_toStartOf="@id/textView2"
         app:layout_constraintStart_toEndOf="@+id/circleImageView"
         app:layout_constraintTop_toTopOf="@+id/circleImageView" />
 
-    <TextView
-        android:textColor="@color/white"
-        android:id="@+id/noOfFollowers"
-        style="@style/TextAppearance.Material3.BodyLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_0"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@+id/noOfPost"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/noOfPost"
-        app:layout_constraintTop_toTopOf="@+id/noOfPost" />
 
-    <TextView
-        android:id="@+id/textView76"
-        style="@style/TextAppearance.Material3.BodyLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/followers"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/noOfFollowers"
-        app:layout_constraintStart_toStartOf="@+id/noOfFollowers"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
 
     <TextView
         android:id="@+id/name"
@@ -83,7 +60,7 @@
         android:text="@string/name"
         android:textColor="@color/white"
         android:textSize="20sp"
-
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="@+id/circleImageView"
         app:layout_constraintStart_toStartOf="@+id/circleImageView"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
@@ -96,8 +73,10 @@
         android:layout_marginTop="8dp"
         android:text="@string/email"
         android:textColor="@color/white"
+        android:gravity="center"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@+id/circleImageView"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <GridView
