@@ -1,5 +1,6 @@
 package io.github.ashishthehulk.ezybites.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import android.widget.SearchView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import io.github.ashishthehulk.ezybites.R;
+import io.github.ashishthehulk.ezybites.Screens.AddPostActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -85,6 +87,16 @@ public class CommunityFragment extends Fragment {
         postRecyclerView.setHasFixedSize(true);
 
 
+
+        spin_fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getContext(), AddPostActivity.class));
+                getActivity().finish();
+
+            }
+        });
 
         return view;
     }

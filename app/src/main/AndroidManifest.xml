@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EzyBites">
         <activity
+            android:name=".Screens.AddPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".Screens.OtpActivity"
             android:exported="false" />
         <activity
