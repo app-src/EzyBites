@@ -15,17 +15,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.SearchView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -34,6 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import java.util.ArrayList;
 
 import io.github.ashishthehulk.ezybites.Adapters.PostAdapter;
+import io.github.ashishthehulk.ezybites.ImageAdapter;
 import io.github.ashishthehulk.ezybites.Models.PostModel;
 import io.github.ashishthehulk.ezybites.R;
 import io.github.ashishthehulk.ezybites.Screens.AddPostActivity;
@@ -54,11 +50,12 @@ public class CommunityFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
+    GridView gridView;
     private SearchView searchView;
     private SwipeRefreshLayout refreshView;
     private RecyclerView  postRecyclerView;
     private FloatingActionButton spin_fab;
-    private DatabaseReference myRef;
 
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;
@@ -103,19 +100,12 @@ public class CommunityFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_community, container, false);
 
         searchView = view.findViewById(R.id.search_recipe);
-        refreshView = view.findViewById(R.id.refreshView);
-        postRecyclerView = view.findViewById(R.id.postRecyclerView);
         spin_fab = view.findViewById(R.id.spin_fab);
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
         user = auth.getCurrentUser();
 
 
-
-
-        postRecyclerView.setHasFixedSize(true);
-
-        myRef = FirebaseDatabase.getInstance().getReference();
         list = new ArrayList<>();
 
         list.add(new PostModel(R.drawable.f1));
@@ -125,9 +115,11 @@ public class CommunityFragment extends Fragment {
         list.add(new PostModel(R.drawable.f5));
 //        getDataFromFirebase();
        // postRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        postRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        PostAdapter adapter = new PostAdapter(list);
-        postRecyclerView.setAdapter(adapter);
+//        postRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//        PostAdapter adapter = new PostAdapter(list);
+//        postRecyclerView.setAdapter(adapter);
+        gridView = view.findViewById(R.id.PostsofCommunity);
+        gridView.setAdapter(new ImageAdapter(getContext()));
 
 
         spin_fab.setOnClickListener(new View.OnClickListener() {

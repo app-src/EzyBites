@@ -8,6 +8,20 @@
     tools:context=".Fragments.CommunityFragment">
 
 
+    <GridView
+        android:id="@+id/PostsofCommunity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@color/white"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_recipe" />
+
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,24 +39,6 @@
         >
 
     </SearchView>
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/refreshView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_recipe" >
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/postRecyclerView"
-            android:layout_width="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            android:layout_height="wrap_content" />
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -62,7 +58,6 @@
         app:borderWidth="1dp"
         app:tint="@color/white"
         tools:ignore="SpeakableTextPresentCheck"/>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
