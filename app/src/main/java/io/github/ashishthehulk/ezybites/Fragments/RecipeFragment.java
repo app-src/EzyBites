@@ -75,28 +75,22 @@ public class RecipeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_recipe, container, false);
 
-        String[] temp={"A","B","C","D","E"};
-        int[] temp2={R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food};
-        int[] temp3={R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food};
+        String[] temp={"Baingan ka Bharta","Chicken Handi","Dal fry","Kidney Bean Curry","Lamb Biryani"};
+        String[] ingre={"1. Brinjal\n2. Ghee\n3. Red Chillis\n4. Garlic","1. Brinjal\n 2. Ghee\n3. Red Chillis\n4. Garlic","1. Brinjal\n 2. Ghee\n3. Red Chillis\n4. Garlic","1. Brinjal\n 2. Ghee\n3. Red Chillis\n4. Garlic","1. Brinjal\n 2. Ghee\n3. Red Chillis\n4. Garlic"};
+        int[] temp2={R.drawable.foodrecipeimage1,R.drawable.foodrecipeimage2,R.drawable.foodrecipeimage3,R.drawable.foodrecipeimage4,R.drawable.foodrecipeimage5};
+        int[] temp3={R.drawable.veg,R.drawable.nonveg,R.drawable.veg,R.drawable.veg,R.drawable.nonveg};
 
         recipeList= (RecyclerView) view.findViewById(R.id.recyclerView);
+
         recipeList.setLayoutManager(new LinearLayoutManager(getActivity()));
         recipeList.setHasFixedSize(true);
-        recipeList.setAdapter(new RecipeAdapter(temp,temp2,temp3));
+        recipeList.setAdapter(new RecipeAdapter(temp,ingre,temp2,temp3));
 
 
 
 
 
         searchView = view.findViewById(R.id.search_recipe);
-        spin_fab = view.findViewById(R.id.AddRecipe);
-        spin_fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(getContext(), AddPostScreen.class);
-                startActivity(intent);
-            }
-        });
 
         return view;
     }

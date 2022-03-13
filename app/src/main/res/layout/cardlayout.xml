@@ -12,48 +12,68 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="20dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="385dp"
+        android:layout_height="349dp"
+        tools:context=".Fragments.RecipeFragment">
+
+        <ImageView
+            android:id="@+id/DishImage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".Fragments.RecipeFragment">
+            android:layout_height="200dp"
+            android:contentDescription="@string/order_dish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_recipe"
+            tools:visibility="visible" />
 
-            <ImageView
-                android:id="@+id/DishImage"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:contentDescription="@string/order_dish"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/ic_recipe"
-                tools:visibility="visible" />
+        <TextView
+            android:id="@+id/DishName"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/DishImage"
+            app:layout_constraintTop_toBottomOf="@+id/DishImage"
+            tools:text="Description" />
 
-            <TextView
-                android:id="@+id/DishName"
-                android:layout_width="110dp"
-                android:layout_height="39dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:paddingTop="20dp"
-                app:layout_constraintStart_toStartOf="@+id/DishImage"
-                app:layout_constraintTop_toBottomOf="@+id/DishImage"
-                tools:text="Description" />
+        <ImageView
+            android:id="@+id/VegNonVegIndicator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/veg_or_nonveg"
+            app:layout_constraintBottom_toBottomOf="@+id/DishName"
+            app:layout_constraintEnd_toEndOf="@+id/DishImage"
+            app:layout_constraintTop_toBottomOf="@+id/DishImage"
+            tools:srcCompat="@drawable/ic__61_2619381_chitr_veg_symbol_svg_veg_and_non_veg" />
 
-            <ImageView
-                android:id="@+id/VegNonVegIndicator"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:contentDescription="@string/veg_or_nonveg"
-                app:layout_constraintBottom_toBottomOf="@+id/DishName"
-                app:layout_constraintEnd_toEndOf="@+id/DishImage"
-                app:layout_constraintTop_toBottomOf="@+id/DishImage"
-                tools:srcCompat="@drawable/ic__61_2619381_chitr_veg_symbol_svg_veg_and_non_veg" />
+        <TextView
+            android:id="@+id/recdesc"
+            android:layout_width="208dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@+id/DishImage"
+            app:layout_constraintTop_toBottomOf="@+id/DishName"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="101dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="ORDER NOW"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VegNonVegIndicator" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </com.google.android.material.card.MaterialCardView>
+</com.google.android.material.card.MaterialCardView>
 

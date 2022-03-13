@@ -11,7 +11,7 @@ public class ImageAdapter extends BaseAdapter {
 
     private Context mContext;
     private int[] imageArray= {
-            R.drawable.ic_recipe,R.drawable.ic_launcher_foreground
+            R.drawable.foodrecipeimage1,R.drawable.foodrecipeimage2,R.drawable.foodrecipeimage3,R.drawable.foodrecipeimage4,R.drawable.foodrecipeimage5
     };
 
     public ImageAdapter(Context mContext) {

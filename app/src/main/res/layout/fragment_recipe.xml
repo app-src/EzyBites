@@ -40,25 +40,4 @@
     </androidx.recyclerview.widget.RecyclerView>
 
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/AddRecipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="26dp"
-        android:layout_marginBottom="26dp"
-        android:clickable="true"
-        android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="@color/darkRed"
-        app:elevation="10dp"
-        app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="40dp"
-        app:borderWidth="1dp"
-        app:tint="@color/white"
-        tools:ignore="SpeakableTextPresentCheck"/>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
