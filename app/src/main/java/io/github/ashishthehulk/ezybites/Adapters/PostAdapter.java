@@ -1,5 +1,6 @@
 package io.github.ashishthehulk.ezybites.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.ArrayList;
@@ -19,9 +21,15 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     private List<PostModel> mList = new ArrayList<>();
 
+
     public PostAdapter(List<PostModel> mList)
     {
+
+
         this.mList = mList;
+    }
+
+    public PostAdapter(ArrayList<PostModel> list) {
     }
 
 
@@ -38,7 +46,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
 
-        //holder.imageView.set
+
+
+        holder.imageView.setImageResource(mList.get(position).getImage());
 
 
     }
