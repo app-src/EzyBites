@@ -9,4 +9,4 @@ You open our app get inspired by the recipes posted by creators, choose the reci
 
 # UI
 
-<img src="SS/ezyBitesSS1.png" width="340"><img src="SS/ezyBitesSS3.png" width="340"><img src="SS/ezyBitesSS5.png" width="340">
+<img src="SS/ezyBitesSS1.png" width="320"><img src="SS/ezyBitesSS3.png" width="320"><img src="SS/ezyBitesSS5.png" width="320">
