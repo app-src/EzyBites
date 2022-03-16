@@ -8,5 +8,5 @@ Imagine you are hungry but want to eat homemade food.
 You open our app get inspired by the recipes posted by creators, choose the recipe and click on "Order Now". All the ingredients required will be automatically added to our partner home delivery service provider's cart in an adequate amount. Now you can make the dish eat and then post it on our app itself to inspire other users following you.
 
 # UI
-<img src="SS/ezyBitesSS2.png" width="350">
-<img src="SS/ezyBitesSS1.png" width="20"><img src="SS/ezyBitesSS3.png" width="350"><img src="SS/ezyBitesSS5.png" width="350">
+
+<img src="SS/ezyBitesSS1.png" width="350"><img src="SS/ezyBitesSS3.png" width="350"><img src="SS/ezyBitesSS5.png" width="350">
