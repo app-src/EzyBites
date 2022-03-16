@@ -1,5 +1,5 @@
 # EzyBites
-created while competing for [Vihaan 5.0](https://vihaan.ieeedtu.in/#/) at [DTU](http://www.dtu.ac.in/)
+created while competing for [Vihaan 5.0](https://vihaan.ieeedtu.in/#/) at [DTU](http://www.dtu.ac.in/) under the time frame of 24 hours
 
 # The Problem 
 Imagine you are hungry but want to eat homemade food.
