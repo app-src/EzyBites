@@ -11,3 +11,8 @@ You open our app get inspired by the recipes posted by creators, choose the reci
 <img src="SS/ezyBitesSS2.png" width="350">
 <img src="SS/ezyBitesSS1.png" width="350"><img src="SS/ezyBitesSS3.png" width="350">
 <img src="SS/ezyBitesSS5.png" width="350">
+
+#Flow
+Login/SignUP page, login services utilized from Firebase
+User data is stored in Firebase, like posts followers, images
+Recomendations were based upon intrestes like Veg/Non-Veg and previously used ingredients
